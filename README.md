@@ -37,7 +37,8 @@ Around 12.3 seconds to insert 10000 users into MongoDB collection.
 ![](assets/insertUser.png?raw=true)
 
 - Does PostgreSQL insert many small objects faster than MongoDB?
-No, it appears the Node.js implementation of mongodb is faster than pg. It becomes increasingly apparent as the number of objects increases.
+
+No, it appears mongodb is faster than pg. It becomes increasingly apparent as the number of objects increases.
 
 - How long does it take to get these users back from PostgreSQL table?
 - How long does it take to get just the user.name from PostgreSQL table?
@@ -48,7 +49,12 @@ No, it appears the Node.js implementation of mongodb is faster than pg. It becom
 
 # Versions
 Tested using Node v14.0.0
-pg v8.0.3
+MacBook Pro (15-inch, 2017) Catalina 10.15.3
+2.9 GHz Quad-Core Intel Core i7 16 GB 2133 MHz LPDDR3
+pg npm v8.0.3
+PostgreSQL 12.1
+mongodb npm v3.5.7
+mongodb version v4.2.6
 
 # Start Databases
 `docker-compose up -d`

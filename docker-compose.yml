@@ -1,6 +1,10 @@
 version: '3'
 services:
-  database:
+  pgdatabase:
     image: "postgres"
     ports:
       - 5432:5432
+  mongodatabase:
+    image: "mongo"
+    ports:
+      - 27017:27017

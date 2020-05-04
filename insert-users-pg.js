@@ -2,7 +2,7 @@ const { Pool, Client } = require('pg');
 const { PerformanceObserver, performance } = require('perf_hooks');
 
 // number of example users to insert into temp db
-const userCount = 1000;
+const userCount = 10000;
 
 const obs = new PerformanceObserver((items) => {
   console.log(`Process took ${items.getEntries()[0].duration}ms to insert ${userCount} users.`);

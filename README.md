@@ -1,5 +1,5 @@
 # node-mongo-vs-postgres-jsonb
-Measure the performance of Postgres (pg npm module) JSONB and compare with MongoDB. Utilizes the Node.js [Performance Timing API](https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_timing_api). Sets up databases locally via docker-compose.
+Measure the performance of Postgres (pg npm module) JSONB and compare with MongoDB (mongodb npm module). Utilizes the Node.js [Performance Timing API](https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_timing_api). Sets up databases locally via docker-compose.
 
 # Questions
 - How long does it take to insert example users into a PostgreSQL table with a jsonb type?
@@ -36,10 +36,12 @@ Around 12.3 seconds to insert 10000 users into MongoDB collection.
 
 ![](assets/insertUser.png?raw=true)
 
-- Does PostgreSQL insert 1,000 example users faster than MongoDB?
-- How long does it take to get these 1,000 users back from PostgreSQL table?
+- Does PostgreSQL insert many small objects faster than MongoDB?
+No, it appears the Node.js implementation of mongodb is faster than pg. It becomes increasingly apparent as the number of objects increases.
+
+- How long does it take to get these users back from PostgreSQL table?
 - How long does it take to get just the user.name from PostgreSQL table?
-- How long does it take to get these 1,000 users back from MongoDB collection?
+- How long does it take to get these users back from MongoDB collection?
 - How long does it take to get just the user.name from MongoDB collection?
 - Does a PostgreSQL TEMP table speed up performance?
 - How much does Mongoose affect MongoDB performance?

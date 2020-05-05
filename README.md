@@ -16,7 +16,7 @@ Process took 21905.016349ms to insert 10000 users.
 Process took 22108.081911ms to insert 10000 users.
 Average of 22081.425447666666667
 ```
-Around 22 seconds to insert 1,000 example users into a PostgreSQL table with a jsonb type.
+Around 22 seconds to insert 10,000 example users into a PostgreSQL table with a jsonb type.
 
 - How long does it take to insert example users into a MongoDB collection?
 ```
